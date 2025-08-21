@@ -66,15 +66,11 @@ function App() {
             />
           } 
         />
-        <Route 
-          path="/preview" 
-          element={
-            <PreviewPage 
-              fileStructure={fileStructure} 
-              notes={notes}
-            />
-          } 
-        />
+        <Route  path="/courses"  element={<PreviewPage fileStructure={fileStructure} notes={notes} />} />
+        <Route  path="/courses/:courseId"  element={<PreviewPage fileStructure={fileStructure} notes={notes} />} />
+        <Route  path="/courses/:courseId/:semesterId"  element={<PreviewPage fileStructure={fileStructure} notes={notes} />} />
+        <Route  path="/courses/:courseId/:semesterId/:bookId"  element={<PreviewPage fileStructure={fileStructure} notes={notes} />} />
+        <Route  path="/courses/:courseId/:semesterId/:bookId/:chapterId"  element={<PreviewPage fileStructure={fileStructure} notes={notes} />} />
       </Routes>
     </Router>
   )
